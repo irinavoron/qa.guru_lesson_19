@@ -17,7 +17,6 @@ def test_search():
         results.should(have.size_greater_than(0))
         results.first.should(have.text('Guru'))
 
-
 # def test_open_first_article():
 #     search('Guru')
 #     with allure.step('Open the first article'):

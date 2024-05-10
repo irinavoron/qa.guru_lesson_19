@@ -3,6 +3,7 @@ from selene import browser
 from appium.options.android import UiAutomator2Options
 from appium import webdriver
 from config import config
+from qa_guru_lesson_19.utils import attach
 
 
 @pytest.fixture(scope='session', autouse=True)
@@ -29,4 +30,11 @@ def mobile_management():
 
     yield
 
+    session_id = browser.driver.session_id
+
+    attach.add_screenshot()
+    attach.add_xml()
+
     browser.quit()
+
+    attach.add_video(session_id)
