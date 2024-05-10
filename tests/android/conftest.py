@@ -3,7 +3,7 @@ import pytest
 from dotenv import load_dotenv
 from selene import browser
 from appium.options.android import UiAutomator2Options
-from selenium import webdriver
+from appium import webdriver
 
 
 @pytest.fixture(scope='session', autouse=True)
