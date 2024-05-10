@@ -6,14 +6,14 @@ from config import config
 from qa_guru_lesson_19.utils import attach
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='function', autouse=True)
 def mobile_management():
     options = UiAutomator2Options().load_capabilities({
         "platformName": "android",
         "platformVersion": "9.0",
         "deviceName": "Google Pixel 3",
 
-        "app": "bs://sample.app",
+        "app": config.APP_URL,
 
         'bstack:options': {
             "projectName": "First Python project",

@@ -7,6 +7,7 @@ class Config(pydantic_settings.BaseSettings):
     BS_USER: str
     BS_URL: str = 'http://hub.browserstack.com/wd/hub'
     TIMEOUT: float = 10
+    APP_URL: str = 'bs://sample.app'
 
 
 load_dotenv()

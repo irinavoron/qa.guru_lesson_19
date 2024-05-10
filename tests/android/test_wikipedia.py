@@ -17,10 +17,8 @@ def test_search():
         results.should(have.size_greater_than(0))
         results.first.should(have.text('Guru'))
 
-# def test_open_first_article():
-#     search('Guru')
-#     with allure.step('Open the first article'):
-#         browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title')).first.click()
-#
-#     with allure.step('Verify the article title matches the search request'):
-#         pass
+
+def test_open_first_article():
+    search('Guru')
+    with allure.step('Open the first article'):
+        browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title')).first.click()
