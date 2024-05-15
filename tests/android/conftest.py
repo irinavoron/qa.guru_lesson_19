@@ -7,7 +7,7 @@ from qa_guru_lesson_19.utils import attach
 
 
 @pytest.fixture(scope='function', autouse=True)
-def mobile_management():
+def mobile_android_management():
     options = UiAutomator2Options().load_capabilities({
         "platformName": "android",
         "platformVersion": "9.0",
