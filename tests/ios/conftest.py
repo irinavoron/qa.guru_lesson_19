@@ -27,4 +27,6 @@ def mobile_ios_management():
     browser.config.driver = webdriver.Remote(config.BS_URL, options=options)
     browser.config.timeout = config.TIMEOUT
 
+    yield
+
     browser.quit()
